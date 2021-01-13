@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Container, Col, Row, Card } from "react-bootstrap";
 import axios from 'axios';
-import ConstAmend1Data from '../seedData/const1';
+// import ConstAmend1Data from '../seedData/const1';
 
 const ConstAmend2 = () => {
 
-  const [candidateList, setCandidateList] = useState([]);
+  const [, setCandidateList] = useState([]);
   const [electionList, setElectionList] = useState([]);
   const [answer, setAnswer] = useState("");
   const [voted, setVoted] = useState(false);
@@ -26,21 +26,21 @@ const ConstAmend2 = () => {
         setElectionList(electionData);
         // console.log(electionData)
       })
-  }, []); 
+  }, []);
 
   const submitVote = (event) => {
     event.preventDefault();
-     // const selectedCandidate = candidateList.find(currentCandidate => currentCandidate.name === answer)
-     const selectedElection = electionList.find(currentElection => currentElection.question === "Constitutional Amendment 2")
-     alert("You voted for " + answer + ".");
-     axios.post('/api/vote', { election: selectedElection._id })
+    // const selectedCandidate = candidateList.find(currentCandidate => currentCandidate.name === answer)
+    const selectedElection = electionList.find(currentElection => currentElection.question === "Constitutional Amendment 2")
+    alert("You voted for " + answer + ".");
+    axios.post('/api/vote', { election: selectedElection._id })
       .then((res) => {
         // console.log(res.data)
         setVoted(true)
         setAnswer()
       })
-      .catch(err => console.log (err));
-    };
+      .catch(err => console.log(err));
+  };
 
   return (
     <Container id="const-amend1-card">
@@ -48,7 +48,7 @@ const ConstAmend2 = () => {
         <Card.Body>
           <h3>Utah State Constitutional Amendment 2</h3>
           <h6>
-          Shall the Utah Constitution be amended to specify that certain requirements that a person must meet to be eligible for the office of senator or representative in the Utah Legislature apply at the time the person is elected or appointed?
+            Shall the Utah Constitution be amended to specify that certain requirements that a person must meet to be eligible for the office of senator or representative in the Utah Legislature apply at the time the person is elected or appointed?
           </h6>
           <hr />
 

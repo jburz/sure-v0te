@@ -67,7 +67,7 @@ const Profile = () => {
         <Card className="mainCard" style={{ width: "30rem" }}>
           <ListGroupItem>
             <Form>
-              {picture ? <img src={picture}></img> :
+              {picture ? <img alt="profilepic" src={picture}></img> :
                 <ImageUploader
                   withIcon={true}
                   buttonText='Upload Image'

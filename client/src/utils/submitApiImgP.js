@@ -1,6 +1,5 @@
 import ApiCalls from "./ApiCalls";
-import axios from "axios";
-import React, { useState, useRef } from 'react';
+
 
 
 export async function submitToAgatha(personGroupId, personId, image, cb) {
@@ -36,7 +35,7 @@ export async function submitToAgatha(personGroupId, personId, image, cb) {
     reader.readAsArrayBuffer(image);
 
 
-    // renderOnload()
+    renderOnload()
 };
 
 

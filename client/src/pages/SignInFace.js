@@ -7,7 +7,6 @@
 // 4. pull the confidence rating (run some tests on the confidence witht the new system)
 // 5. use the confidence rating to varify user and give access to voting page
 // import Rreact, elements from React-Bootstrap, SignUp.css
-import axios from 'axios';
 import React, { useState, useRef, useEffect } from 'react';
 import { Button, ButtonGroup, Col, Container, Form, Jumbotron, Row } from "react-bootstrap";
 import { useGlobalContextAuthUser } from '../utils/GlobalContextAuthUser';

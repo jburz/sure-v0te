@@ -12,7 +12,7 @@ import axios from 'axios';
 
 const ScRetain = () => {
 
-  const [candidateList, setCandidateList] = useState([]);
+  const [, setCandidateList] = useState([]);
   const [electionList, setElectionList] = useState([]);
   const [answer, setAnswer] = useState("");
   const [voted, setVoted] = useState(false);
@@ -33,9 +33,9 @@ const ScRetain = () => {
         setElectionList(electionData);
         // console.log(electionData)
       })
-  }, []); 
+  }, []);
 
-  const scJustice = ScRetainData[0].candidate;
+  // const scJustice = ScRetainData[0].candidate;
 
   const submitVote = (event) => {
     event.preventDefault();
@@ -48,8 +48,8 @@ const ScRetain = () => {
         setVoted(true)
         setAnswer()
       })
-      .catch(err => console.log (err));
-    };
+      .catch(err => console.log(err));
+  };
 
   return (
     <Container id="scretain-elect-card">
@@ -61,7 +61,7 @@ const ScRetain = () => {
 
           <Row>
             <Col xs lg={5}></Col>
-            <Col xs lg={1}>  
+            <Col xs lg={1}>
               <form>
                 <input
                   type="radio"
@@ -73,17 +73,17 @@ const ScRetain = () => {
                     setAnswer(e.target.value);
                   }}
                 />
-                </form>
-              </Col>
+              </form>
+            </Col>
             <Col xs lg={1}>
-                <p>Yes</p>
+              <p>Yes</p>
             </Col>
             <Col xs lg={5}></Col>
           </Row>
 
           <Row>
             <Col xs lg={5}></Col>
-            <Col xs lg={1}>  
+            <Col xs lg={1}>
               <form>
                 <input
                   type="radio"
@@ -95,23 +95,23 @@ const ScRetain = () => {
                     setAnswer(e.target.value);
                   }}
                 />
-                </form>
-              </Col>
+              </form>
+            </Col>
             <Col xs lg={1}>
-                <p>No</p>
+              <p>No</p>
             </Col>
             <Col xs lg={5}></Col>
           </Row>
 
-          <Button 
-              variant="dark" 
-              type="submit"
-              size="lg" 
-              block
-              disabled={!answer || voted}
-              onClick={submitVote}
-            >
-              Submit
+          <Button
+            variant="dark"
+            type="submit"
+            size="lg"
+            block
+            disabled={!answer || voted}
+            onClick={submitVote}
+          >
+            Submit
             </Button>
         </Card.Body>
       </Card>

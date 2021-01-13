@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import Alert from 'react-bootstrap/Alert'
 import { Loader } from 'react-overlay-loader';
 import ApiCalls from "../../utils/ApiCalls";
 import 'react-overlay-loader/styles.css';

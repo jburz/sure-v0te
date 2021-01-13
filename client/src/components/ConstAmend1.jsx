@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Container, Col, Row, Card } from "react-bootstrap";
 import axios from 'axios';
-import ConstAmend1Data from '../seedData/const1';
+// import ConstAmend1Data from '../seedData/const1';
 
 const ConstAmend1 = () => {
 
-  const [candidateList, setCandidateList] = useState([]);
+  const [, setCandidateList] = useState([]);
   const [electionList, setElectionList] = useState([]);
   const [answer, setAnswer] = useState("");
   const [voted, setVoted] = useState(false);
@@ -26,7 +26,7 @@ const ConstAmend1 = () => {
         setElectionList(electionData);
         // console.log(electionData)
       })
-  }, []); 
+  }, []);
 
   const submitVote = (event) => {
     event.preventDefault();
@@ -39,8 +39,8 @@ const ConstAmend1 = () => {
         setVoted(true)
         setAnswer()
       })
-      .catch(err => console.log (err));
-    };
+      .catch(err => console.log(err));
+  };
 
   return (
     <Container id="const-amend1-card">

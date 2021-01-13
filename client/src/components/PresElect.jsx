@@ -17,7 +17,7 @@ const PresElect = (props) => {
   const [electionList, setElectionList] = useState([]);
   const [candidate, setCandidate] = useState("");
   const [voted, setVoted] = useState(false);
-  const [userId] = useGlobalContextAuthUser();
+  // const [userId] = useGlobalContextAuthUser();
 
   // const [dataReceived, setDataReceived] = useState(false);
   // get data back, set to true
